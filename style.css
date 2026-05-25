@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 300;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12vh 5vw;
+}
+
+.eyebrow {
+  margin: 0 0 2.5rem 0;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  line-height: 1.2;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+
+.project-link {
+  color: #fff;
+  font-size: clamp(3.2rem, 7.5vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.045em;
+  text-underline-offset: 0.06em;
+  transition: opacity 200ms ease, transform 200ms ease, letter-spacing 200ms ease;
+}
+
+.project-link:visited {
+  color: #fff;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  opacity: 0.65;
+  transform: translateX(0.35rem);
+  letter-spacing: -0.09em;
+}
+
+.project-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 0.25rem;
+}
+
+.external::after {
+  content: " ↗";
+  font-size: 0.45em;
+  vertical-align: top;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 8vh 6vw;
+  }
+
+  .project-list {
+    gap: 1rem;
+  }
+
+  .project-link {
+    font-size: clamp(2.6rem, 14vw, 5rem);
+    line-height: 0.95;
+  }
+}
